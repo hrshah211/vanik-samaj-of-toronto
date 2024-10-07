@@ -1,5 +1,5 @@
 // app/layout.js
-"use client"
+"use client";
 import React, { useState } from "react";
 import { AppBar, Toolbar, Typography, Box, IconButton, Drawer, List, ListItem, ListItemText } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu"; // Import Menu Icon
@@ -30,10 +30,25 @@ export default function RootLayout({ children }) {
       </head>
       <body style={{ margin: 10, padding: 0, background: theme.colors.background }}>
         <AppBar position="sticky" style={{ background: theme.colors.primary, borderRadius: "15px", overflow: "hidden", boxShadow: "none" }}>
-          <Toolbar style={{ justifyContent: "space-between", padding: "5px" }}>
+          <Toolbar style={{ justifyContent: "space-between", padding: "15px" }}>
             <Box display="flex" alignItems="center">
-              <Image src="/Logo.png" alt="Vanik Samaj Logo" width={50} height={70} style={{ marginRight: "15px" }} />
-              <Typography variant="h4" style={{ fontFamily: theme.typography.h1FontFamily, color: theme.colors.onBackground, fontWeight: "bold" }}>
+              <Image
+                src="/Logo.png"
+                alt="Vanik Samaj Logo"
+                width={50}
+                height={70}
+                style={{ marginRight: "15px" }}
+                sizes="(max-width: 600px) 40px, (min-width: 601px) 50px" // Adjust size for mobile
+              />
+              <Typography
+                variant="h4"
+                sx={{
+                  fontFamily: theme.typography.h1FontFamily,
+                  color: theme.colors.onBackground,
+                  fontWeight: "bold",
+                  fontSize: { xs: "1.2rem", sm: "2rem" }, // Responsive font size
+                }}
+              >
                 Vanik Samaj of Toronto
               </Typography>
             </Box>
