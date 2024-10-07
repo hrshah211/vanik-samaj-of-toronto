@@ -6,11 +6,11 @@ const AboutUs = () => {
   return (
     <Box
       sx={{
-        padding: "20px",
+        padding: { xs: "10px", sm: "20px" }, // Responsive padding
         fontFamily: theme.typography.h2FontFamily,
         backgroundColor: theme.colors.background,
-        paddingLeft: "100px",
-        paddingRight: "100px",
+        paddingLeft: { xs: "10px", sm: "100px" }, // Responsive padding
+        paddingRight: { xs: "10px", sm: "100px" }, // Responsive padding
       }}
     >
       <Typography
@@ -18,13 +18,14 @@ const AboutUs = () => {
         sx={{
           fontFamily: theme.typography.h1FontFamily,
           marginBottom: "10px",
+          fontSize: { xs: "1.5rem", sm: "2rem" }, // Responsive font size
         }}
       >
         Our History
       </Typography>
       <Typography
         sx={{
-          fontSize: theme.typography.bodyFontSize,
+          fontSize: { xs: "0.9rem", sm: theme.typography.bodyFontSize }, // Responsive font size
           lineHeight: "1.7",
           marginBottom: "20px",
         }}
@@ -40,6 +41,7 @@ const AboutUs = () => {
         sx={{
           fontFamily: theme.typography.h1FontFamily,
           marginBottom: "10px",
+          fontSize: { xs: "1.5rem", sm: "2rem" }, // Responsive font size
         }}
       >
         Our Objectives
@@ -55,7 +57,7 @@ const AboutUs = () => {
           "To encourage education by granting scholarships for grade 12 students.",
           "To encourage youth for their active involvement and participation.",
         ].map((objective, index) => (
-          <ListItem key={index}>
+          <ListItem key={index} sx={{ padding: { xs: "5px", sm: "10px" } }}> {/* Responsive padding */}
             <ListItemIcon>
               <img
                 src="/Logo.png" // Use your logo as bullet points
@@ -68,7 +70,7 @@ const AboutUs = () => {
             </ListItemIcon>
             <Typography
               sx={{
-                fontSize: theme.typography.bodyFontSize,
+                fontSize: { xs: "0.9rem", sm: theme.typography.bodyFontSize }, // Responsive font size
                 lineHeight: "1.7",
               }}
             >
